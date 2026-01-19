@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background:  whitesmoke;
+    color: #333;
+}
+
+/* Navbar */
+nav {
+    background: black;
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+}
+
+nav a:hover {
+    color: orange;
+}
+
+/* Hero Section */
+.hero {
+    height: 50vh; /* or whatever height you want */
+    background: url("images/logo.jpeg") center/contain no-repeat;
+    background-size: contain;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/* Mobile devices */
+@media (max-width: 768px) {
+    .logo {
+        height: 50vh;     /* half of mobile screen height */
+    }
+}
+
+
+
+
+/* Content */
+.container {
+    padding: 40px;
+    text-align: center;
+}
+
+/* Gallery */
+.carousel img {
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .carousel img {
+        height: 220px;
+    }
+}
+
+
+/* Footer */
+footer {
+    background: black;
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .logo {
+        width: 150px;
+        padding: 12px;
+    }
+}
