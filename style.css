@@ -62,7 +62,6 @@ nav a:hover {
 }
 
 
-
 /* Mobile devices */
 @media (max-width: 768px) {
     .logo {
@@ -71,8 +70,6 @@ nav a:hover {
         padding: 12px;
     }
 }
-
-
 
 
 /* Content */
@@ -139,6 +136,7 @@ nav a:hover {
 h2, h3, p {
     margin: 0.5rem 0;
 }
+
 
 
 
