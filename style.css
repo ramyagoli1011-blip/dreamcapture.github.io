@@ -53,7 +53,7 @@ nav a:hover {
 
 /* Hero Section */
 .hero {
-    height: 50vh; /* or whatever height you want */
+    height: 40vh; /* or whatever height you want */
     background: url("images/logo.jpeg") center/contain no-repeat;
     background-size: contain;
     display: flex;
@@ -106,6 +106,7 @@ footer {
 h2, h3, p {
     margin: 0.5rem 0;
 }
+
 
 
 
