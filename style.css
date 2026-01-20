@@ -67,6 +67,8 @@ nav a:hover {
 @media (max-width: 768px) {
     .logo {
         height: 50vh;     /* half of mobile screen height */
+         width: 150px;
+        padding: 12px;
     }
 }
 
@@ -101,13 +103,7 @@ footer {
     text-align: center;
 }
 
-/* Mobile Responsive */
-@media (max-width: 768px) {
-    .logo {
-        width: 150px;
-        padding: 12px;
-    }
-}
+
 
 
 
