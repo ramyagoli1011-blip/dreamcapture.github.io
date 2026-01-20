@@ -13,7 +13,7 @@ body {
 /* Navbar */
 nav {
     background: black;
-    padding: 1rem;
+    padding: 15px;
     text-align: center;
 }
 
@@ -94,4 +94,5 @@ footer {
         padding: 12px;
     }
 }
+
 
