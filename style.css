@@ -14,9 +14,18 @@ body {
 nav {
     background: black;
     padding: 1rem;
-    display: flex;
+}
+
+nav ul {
+    display: flex;              /* makes horizontal */
     justify-content: center;
-    gap: 1.6rem;   /* space between links */
+    list-style: none;           /* remove bullets */
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin: 0 0.8rem;           /* spacing */
 }
 
 nav a {
@@ -29,9 +38,11 @@ nav a:hover {
     color: orange;
 }
 
+/* Mobile */
 @media (max-width: 600px) {
-   nav {
-        flex-direction: row;   /* keep horizontal */
+    nav ul {
+        flex-direction: row;    /* keep horizontal */
+        flex-wrap: wrap;        /* wrap if needed */
     }
 
     nav a {
@@ -97,6 +108,7 @@ footer {
         padding: 12px;
     }
 }
+
 
 
 
