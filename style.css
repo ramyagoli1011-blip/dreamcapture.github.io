@@ -96,16 +96,50 @@ nav a:hover {
 
 
 /* Footer */
-footer {
-    background: black;
-    color: white;
+.contact-footer {
+    background: #111;
+    color: #fff;
     padding: 30px;
     text-align: center;
 }
 
+.contact-footer h3 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.contact-footer p {
+    margin: 12px 0;
+    font-size: 18px;
+}
+
+.contact-footer i {
+    margin-right: 10px;
+    color: #ff4d4d;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.contact-footer a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Hover Effects */
+.contact-footer p:hover i {
+    transform: scale(1.2);
+    color: #ffcc00;
+}
+
+.contact-footer a:hover {
+    color: #ffcc00;
+}
+
+/* for spaces btw blocks */
 h2, h3, p {
     margin: 0.5rem 0;
 }
+
 
 
 
