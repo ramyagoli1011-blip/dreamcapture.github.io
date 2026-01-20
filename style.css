@@ -32,7 +32,6 @@ nav a:hover {
 @media (max-width: 600px) {
    nav {
         flex-direction: row;   /* keep horizontal */
-        flex-wrap: wrap;       /* optional: wrap if space is tight */
     }
 
     nav a {
@@ -98,6 +97,7 @@ footer {
         padding: 12px;
     }
 }
+
 
 
 
