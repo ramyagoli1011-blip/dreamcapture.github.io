@@ -1,15 +1,20 @@
 const imageSets = {
   wedding: [
-    "images/wedding1.jpg",
-    "images/wedding2.jpg"
+    "images/wed1.jpg",
+    "images/wed2.jpg",
+    "images/wed3.jpg",
+    "images/wed4.jpg"
   ],
   birthday: [
-    "images/birthday1.jpg",
-    "images/birthday2.jpg"
+    "images/bir1.jpg",
+    "images/bir2.jpg",
+    "images/bir3.jpg",
+    "images/bir4.jpg"
   ],
   portrait: [
-    "images/portrait1.jpg",
-    "images/portrait2.jpg"
+    "images/photo2.jpg",
+    "images/photo4.jpg",
+    "images/photo7.jpg",
   ]
 };
 
