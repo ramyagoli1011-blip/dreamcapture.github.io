@@ -78,48 +78,68 @@ nav a:hover {
     text-align: center;
 }
 
-/* Gallery */
-.slider {
-  max-width: 100%;
-  overflow: hidden;
-  position: relative;
-}
-
-.slides {
+/* Main Gallery */
+.gallery {
   display: flex;
-  transition: transform 0.5s ease-in-out;
+  justify-content: space-around;
+  margin-top: 40px;
 }
 
-.slides img {
-  width: 100%;
-  height: auto;
-  flex-shrink: 0;
-}
-
-/* Dot indicators */
-.dots {
-  position: absolute;
-  bottom: 10px;
-  width: 100%;
+.card {
+  width: 100px;
   text-align: center;
-}
-
-.dot {
-  height: 10px;
-  width: 10px;
-  margin: 0 4px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
   cursor: pointer;
 }
 
-.dot.active {
-  background-color: #fff;
+.card img {
+  width: 100%;
+  border-radius: 10px;
 }
 
+.card p {
+  margin-top: 8px;
+  font-weight: bold;
+}
 
+/* Slider Page */
+.slider-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
 
+.hidden {
+  display: none;
+}
+
+.back-btn {
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  font-size: 16px;
+}
+
+/* Slider */
+.slider-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider {
+  width: 90%;
+  height: 50vh;
+  overflow: hidden;
+  display: flex;
+}
+
+.slider img {
+  width: 100%;
+  flex-shrink: 0;
+  object-fit: cover;
+}
 
 /* Footer */
 .contact-footer {
@@ -165,6 +185,7 @@ nav a:hover {
 h2, h3, p {
     margin: 0.5rem 0;
 }
+
 
 
 
