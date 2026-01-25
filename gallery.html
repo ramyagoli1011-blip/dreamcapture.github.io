@@ -17,20 +17,38 @@
     </ul>
 </nav>
 
-<div class="slider">
-    <div class="slides">
-      <img src="images/photo1.jpeg" alt="photo1">
-      <img src="images/photo4.jpeg" alt="photo2">
-      <img src="images/photo7.jpeg" alt="photo3">
-    </div>
-
-    <div class="dots"></div>
+<div id="mainGallery" class="gallery">
+  <div class="card" onclick="openSlider('wedding')">
+    <img src="images/wedding1.jpg">
+    <p>Wedding</p>
   </div>
 
-  <script src="script.js"></script>
+  <div class="card" onclick="openSlider('birthday')">
+    <img src="images/birthday1.jpg">
+    <p>Birthday</p>
+  </div>
+
+  <div class="card" onclick="openSlider('portrait')">
+    <img src="images/portrait1.jpg">
+    <p>Portrait</p>
+  </div>
+</div>
+
+<!-- SLIDER PAGE -->
+<div id="sliderPage" class="slider-page hidden">
+  <button class="back-btn" onclick="goBack()">← Back</button>
+
+  <div class="slider-container">
+    <div class="slider" id="slider"></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
     
 </body>
 </html>
+
 
 
 
