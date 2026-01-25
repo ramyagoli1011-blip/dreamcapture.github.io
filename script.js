@@ -1,62 +1,72 @@
-const slides = document.querySelector('.slides');
-const images = document.querySelectorAll('.slides img');
-const dotsContainer = document.querySelector('.dots');
+const imageSets = {
+  wedding: [
+    "images/wedding1.jpg",
+    "images/wedding2.jpg"
+  ],
+  birthday: [
+    "images/birthday1.jpg",
+    "images/birthday2.jpg"
+  ],
+  portrait: [
+    "images/portrait1.jpg",
+    "images/portrait2.jpg"
+  ]
+};
 
-let index = 0;
-let interval;
+let currentIndex = 0;
+let sliderInterval;
 let startX = 0;
 
-/* Create dots */
-images.forEach((img, i) => {
-  const dot = document.createElement('span');
-  dot.classList.add('dot');
-  if (i === 0) dot.classList.add('active');
+function openSlider(type) {
+  document.getElementById("mainGallery").style.display = "none";
+  document.getElementById("sliderPage").classList.remove("hidden");
 
-  dot.addEventListener('click', () => {
-    index = i;
-    updateSlider();
-    resetAutoSlide();
+  const slider = document.getElementById("slider");
+  slider.innerHTML = "";
+
+  imageSets[type].forEach(img => {
+    const image = document.createElement("img");
+    image.src = img;
+    slider.appendChild(image);
   });
 
-  dotsContainer.appendChild(dot);
-});
-
-const dots = document.querySelectorAll('.dot');
-
-function updateSlider() {
-  slides.style.transform = `translateX(-${index * 100}%)`;
-  dots.forEach(dot => dot.classList.remove('active'));
-  dots[index].classList.add('active');
+  currentIndex = 0;
+  startAutoSlide();
+  addTouch(slider);
 }
 
-function autoSlide() {
-  interval = setInterval(() => {
-    index = (index + 1) % images.length;
-    updateSlider();
+function goBack() {
+  clearInterval(sliderInterval);
+  document.getElementById("sliderPage").classList.add("hidden");
+  document.getElementById("mainGallery").style.display = "flex";
+}
+
+function startAutoSlide() {
+  sliderInterval = setInterval(() => {
+    slideNext();
   }, 3000);
 }
 
-function resetAutoSlide() {
-  clearInterval(interval);
-  autoSlide();
+function slideNext() {
+  const slider = document.getElementById("slider");
+  currentIndex = (currentIndex + 1) % slider.children.length;
+  slider.style.transform = `translateX(-${currentIndex * 100}%)`;
 }
 
-/* Touch swipe support */
-slides.addEventListener('touchstart', e => {
-  startX = e.touches[0].clientX;
-});
+/* Touch Support */
+function addTouch(slider) {
+  slider.addEventListener("touchstart", e => {
+    startX = e.touches[0].clientX;
+  });
 
-slides.addEventListener('touchend', e => {
-  let endX = e.changedTouches[0].clientX;
-
-  if (startX - endX > 50) {
-    index = (index + 1) % images.length;
-  } else if (endX - startX > 50) {
-    index = (index - 1 + images.length) % images.length;
-  }
-
-  updateSlider();
-  resetAutoSlide();
-});
-
-autoSlide();
+  slider.addEventListener("touchend", e => {
+    let endX = e.changedTouches[0].clientX;
+    if (startX - endX > 50) slideNext();
+    if (endX - startX > 50) {
+      currentIndex =
+        (currentIndex - 1 + slider.children.length) %
+        slider.children.length;
+      slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+  });
+}
