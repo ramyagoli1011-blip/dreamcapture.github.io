@@ -79,17 +79,46 @@ nav a:hover {
 }
 
 /* Gallery */
-.carousel img {
-    height: 300px;
-    object-fit: cover;
-    border-radius: 10px;
+.slider {
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
 }
 
-@media (max-width: 768px) {
-    .carousel img {
-        height: 220px;
-    }
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
 }
+
+.slides img {
+  width: 100%;
+  height: auto;
+  flex-shrink: 0;
+}
+
+/* Dot indicators */
+.dots {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 4px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #fff;
+}
+
+
 
 
 /* Footer */
@@ -136,6 +165,7 @@ nav a:hover {
 h2, h3, p {
     margin: 0.5rem 0;
 }
+
 
 
 
