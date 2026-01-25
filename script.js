@@ -12,9 +12,9 @@ const imageSets = {
     "images/bir4.jpg"
   ],
   portrait: [
-    "images/photo2.jpg",
-    "images/photo4.jpg",
-    "images/photo7.jpg",
+    "images/photo2.jpeg",
+    "images/photo4.jpeg",
+    "images/photo7.jpeg",
   ]
 };
 
