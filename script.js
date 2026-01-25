@@ -5,7 +5,7 @@ const imageSets = {
     "images/wed3.jpg",
     "images/wed4.jpg"
   ],
-  birthday: [
+  babyshoot: [
     "images/bir1.jpg",
     "images/bir2.jpg",
     "images/bir3.jpg",
