@@ -51,7 +51,7 @@ nav a:hover {
 }
 
 
-/* Hero Section */
+/* home page logo Hero Section */
 .hero {
     height: 40vh; /* or whatever height you want */
     background: url("images/logo.jpeg") center/contain no-repeat;
@@ -69,6 +69,11 @@ nav a:hover {
          width: 150px;
         padding: 12px;
     }
+}
+/* home page Content */
+.container {
+    padding: 40px;
+    text-align: center;
 }
 
 
@@ -216,6 +221,7 @@ footer {
 h2, h3, p {
     margin: 0.5rem 0;
 }
+
 
 
 
