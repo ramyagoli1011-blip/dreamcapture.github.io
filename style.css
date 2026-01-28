@@ -137,6 +137,13 @@ footer {
   font-weight: bold;
 }
 
+ .container p {
+    font-family: cursive;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;  /* text alignment */
+  }
+
 /* Slider Page */
 .slider-page {
   height: 100vh;
@@ -221,6 +228,7 @@ footer {
 h2, h3, p {
     margin: 0.5rem 0;
 }
+
 
 
 
