@@ -138,10 +138,9 @@ footer {
 }
 
 .page-header .container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding-top: 0;
-    transform: translateY(-40px); /* top ki push */
+    max-width: 600px;     /* container size decrease */
+    margin: 0 auto;       /* horizontal center */
+    padding-top: 20px;    /* top ki move */
 }
 
 
@@ -237,6 +236,7 @@ footer {
 h2, h3, p {
     margin: 0.5rem 0;
 }
+
 
 
 
