@@ -142,6 +142,7 @@ footer {
     font-size: 15px;
     font-weight: bold;
     text-align: center;  /* text alignment */
+    padding-top: 20px;
   }
 
 /* Slider Page */
@@ -228,6 +229,7 @@ footer {
 h2, h3, p {
     margin: 0.5rem 0;
 }
+
 
 
 
