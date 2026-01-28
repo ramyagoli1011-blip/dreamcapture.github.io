@@ -138,12 +138,12 @@ footer {
 }
 
 .page-header .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;      /* horizontal center */
-    justify-content: center;  /* vertical center */
-    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+    padding-top: 0;
+    transform: translateY(-40px); /* top ki push */
 }
+
 
  .container p {
     font-family: cursive;
@@ -237,6 +237,7 @@ footer {
 h2, h3, p {
     margin: 0.5rem 0;
 }
+
 
 
 
