@@ -27,30 +27,18 @@
     </div>
 </section>
 
-<div id="mainGallery" class="gallery">
-  <div class="card" onclick="openSlider('wedding')">
-    <img src="images/wedlogo.png">
-    <p>Wedding</p>
-  </div>
-
-  <div class="card" onclick="openSlider('babyshoot')">
-    <img src="images/babylogo.jpg">
-    <p>Baby Shoot</p>
-  </div>
-
-  <div class="card" onclick="openSlider('portrait')">
-    <img src="images/photo1.jpeg">
-    <p>Portrait</p>
-  </div>
+<div class="gallery">
+  <img src="https://picsum.photos/id/1015/300/200" onclick="openViewer(0)">
+  <img src="https://picsum.photos/id/1016/300/200" onclick="openViewer(1)">
+  <img src="https://picsum.photos/id/1018/300/200" onclick="openViewer(2)">
 </div>
 
-<!-- SLIDER PAGE -->
-<div id="sliderPage" class="slider-page hidden">
-  <button class="back-btn" onclick="goBack()">← Back</button>
-
-  <div class="slider-container">
-    <div class="slider" id="slider"></div>
-  </div>
+<!-- Viewer -->
+<div class="viewer" id="viewer">
+  <span class="close" onclick="closeViewer()">✕</span>
+  <span class="nav left" onclick="prevImage()">❮</span>
+  <img id="viewerImage">
+  <span class="nav right" onclick="nextImage()">❯</span>
 </div>
 
 <script src="script.js"></script>
@@ -58,6 +46,7 @@
     
 </body>
 </html>
+
 
 
 
