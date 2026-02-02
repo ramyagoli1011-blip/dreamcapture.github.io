@@ -12,7 +12,7 @@ body {
 
 /* Navbar */
 nav {
-    background: black;
+    background: whitesmoke;
     padding: 1rem;
 }
 
@@ -29,7 +29,7 @@ nav li {
 }
 
 nav a {
-    color: white;
+    color: black;
     text-decoration: none;
     font-size: 1.1rem;
 }
@@ -226,6 +226,7 @@ footer {
 h2, h3, p {
     margin: 0.5rem 0;
 }
+
 
 
 
