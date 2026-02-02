@@ -1,77 +1,53 @@
-const imageSets = {
-  wedding: [
-    "images/wed1.jpg",
-    "images/wed2.jpg",
-    "images/wed3.jpg",
-    "images/wed4.jpg"
-  ],
-  babyshoot: [
-    "images/bir1.jpg",
-    "images/bir2.jpg",
-    "images/bir3.jpg",
-    "images/bir4.jpg"
-  ],
-  portrait: [
-    "images/photo2.jpeg",
-    "images/photo4.jpeg",
-    "images/photo7.jpeg",
-  ]
-};
+const images = document.querySelectorAll('.gallery img');
+const viewer = document.getElementById('viewer');
+const viewerImage = document.getElementById('viewerImage');
 
 let currentIndex = 0;
-let sliderInterval;
 let startX = 0;
+let endX = 0;
 
-function openSlider(type) {
-  document.getElementById("mainGallery").style.display = "none";
-  document.getElementById("sliderPage").classList.remove("hidden");
-
-  const slider = document.getElementById("slider");
-  slider.innerHTML = "";
-
-  imageSets[type].forEach(img => {
-    const image = document.createElement("img");
-    image.src = img;
-    slider.appendChild(image);
-  });
-
-  currentIndex = 0;
-  startAutoSlide();
-  addTouch(slider);
+function openViewer(index) {
+  currentIndex = index;
+  viewerImage.src = images[index].src;
+  viewer.style.display = 'flex';
 }
 
-function goBack() {
-  clearInterval(sliderInterval);
-  document.getElementById("sliderPage").classList.add("hidden");
-  document.getElementById("mainGallery").style.display = "flex";
+function closeViewer() {
+  viewer.style.display = 'none';
 }
 
-function startAutoSlide() {
-  sliderInterval = setInterval(() => {
-    slideNext();
-  }, 3000);
+function nextImage() {
+  currentIndex = (currentIndex + 1) % images.length;
+  viewerImage.src = images[currentIndex].src;
 }
 
-function slideNext() {
-  const slider = document.getElementById("slider");
-  currentIndex = (currentIndex + 1) % slider.children.length;
-  slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+function prevImage() {
+  currentIndex = (currentIndex - 1 + images.length) % images.length;
+  viewerImage.src = images[currentIndex].src;
 }
 
-/* Touch Support */
-function addTouch(slider) {
-  slider.addEventListener("touchstart", e => {
-    startX = e.touches[0].clientX;
-  });
+/* Keyboard support (desktop) */
+document.addEventListener('keydown', m => {
+  if (viewer.style.display === 'flex') {
+    if (m.key === 'ArrowRight') nextImage();
+    if (m.key === 'ArrowLeft') prevImage();
+    if (m.key === 'Escape') closeViewer();
+  }
+});
 
-  slider.addEventListener("touchend", e => {
-    let endX = e.changedTouches[0].clientX;
-    if (startX - endX > 50) slideNext();
-    if (endX - startX > 50) {
-      currentIndex =
-        (currentIndex - 1 + slider.children.length) %
-        slider.children.length;
-      slider.style.transform = `translateX(-${currentIndex * 100}%)`;
-    }
-  });
+/* Touch swipe support (mobile) */
+viewer.addEventListener('touchstart', e => {
+  startX = e.touches[0].clientX;
+});
+
+viewer.addEventListener('touchend', e => {
+  endX = e.changedTouches[0].clientX;
+  handleSwipe();
+});
+
+function handleSwipe() {
+  const diff = startX - endX;
+  if (Math.abs(diff) > 50) {
+    diff > 0 ? nextImage() : prevImage();
+  }
 }
