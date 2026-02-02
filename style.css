@@ -202,12 +202,12 @@ footer {
 
 .contact-footer i {
     margin-right: 10px;
-    color: #ff4d4d;
+    color: #36e5f5;
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .contact-footer a {
-    color: #fff;
+    color: #121010;
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -226,6 +226,7 @@ footer {
 h2, h3, p {
     margin: 0.5rem 0;
 }
+
 
 
 
