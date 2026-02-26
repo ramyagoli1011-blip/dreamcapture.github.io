@@ -37,13 +37,7 @@ nav a:hover {
     }
 }
 
-.page-header {
-  
-  display: flex;
-  justify-content: center;  /* Horizontal center */
-  text-align: center;
 
-}
 
 * {
   margin: 0;
