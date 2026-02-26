@@ -1,3 +1,31 @@
+/* Navbar */
+nav {
+    background: whitesmoke;
+    padding: 1rem;
+}
+
+nav ul {
+    display: flex;              /* makes horizontal */
+    justify-content: center;
+    list-style: none;           /* remove bullets */
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin: 0 0.8rem;           /* spacing */
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+nav a:hover {
+    color: orange;
+}
+
 * {
   margin: 0;
   padding: 0;
