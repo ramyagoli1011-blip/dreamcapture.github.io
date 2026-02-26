@@ -113,75 +113,6 @@ footer {
     font-size: 14px;
 }
 
-
-/* Main Gallery */
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-  gap: 10px;
-  padding: 10px;
-}
-
-.gallery img {
-  width: 100%;
-  height: 100px;
-  object-fit: cover;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-/* Viewer */
-.viewer {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #000;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  z-index: 999;
-}
-
-.viewer img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-}
-
-/* Close button */
-.close {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  font-size: 26px;
-  color: #fff;
-  z-index: 1000;
-  cursor: pointer;
-}
-
-/* Navigation buttons (desktop) */
-.nav {
-  position: absolute;
-  top: 50%;
-  font-size: 40px;
-  color: white;
-  cursor: pointer;
-  user-select: none;
-}
-
-.left { left: 15px; }
-.right { right: 15px; }
-
-/* Hide arrows on mobile (swipe use chestam) */
-@media (max-width: 768px) {
-  .nav {
-    display: none;
-  }
-}
-
-
 /* Footer */
 .contact-footer {
     background: #b0a7a7;
@@ -226,6 +157,7 @@ footer {
 h2, h3, p {
     margin: 0.5rem 0;
 }
+
 
 
 
