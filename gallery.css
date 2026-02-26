@@ -38,12 +38,11 @@ nav a:hover {
 }
 
 .page-header {
-  min-height: 60vh; /* Adjust height as needed */
+  
   display: flex;
-  align-items: center;      /* Vertical center */
   justify-content: center;  /* Horizontal center */
   text-align: center;
-  background: #000; /* Optional background */
+
 }
 
 * {
