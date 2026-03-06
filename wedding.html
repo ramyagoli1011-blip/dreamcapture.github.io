@@ -1,26 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wedding Gallery</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wedding Gallery</title>
+<link rel="stylesheet" href="gallery.css">
 </head>
+
 <body>
 
-<header class="header">
-  <a href="gallery.html" class="back">← Back</a>
-  <h2>Wedding</h2>
-</header>
+<button class="back" onclick="goBack()">←</button>
 
-<section class="gallery">
+<h2 class="gallery-title">Wedding Gallery</h2>
 
-  <div class="photo"><img src="images/wed1.jpg"></div>
-  <div class="photo"><img src="images/wed2.jpg"></div>
-  <div class="photo"><img src="images/wed3.jpg"></div>
-  <div class="photo"><img src="images/wed4.jpg"></div>
-  
-</section>
+<div class="gallery">
+
+<img src="photo1.jpeg" onclick="openImage(this)">
+<img src="photo2.jpeg" onclick="openImage(this)">
+<img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc" onclick="openImage(this)">
+<img src="https://images.unsplash.com/photo-1530023367847-a683933f4172" onclick="openImage(this)">
+<img src="https://images.unsplash.com/photo-1519741347686-c1e0aadf4611" onclick="openImage(this)">
+<img src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e" onclick="openImage(this)">
+
+</div>
+
+<div id="preview">
+
+<button class="nav prev" onclick="prevImage()">❮</button>
+
+<img id="previewImg">
+
+<button class="nav next" onclick="nextImage()">❯</button>
+
+<span class="close" onclick="closeImage()">✕</span>
+
+</div>
+
+<script src="script.js"></script>
 
 </body>
 </html>
