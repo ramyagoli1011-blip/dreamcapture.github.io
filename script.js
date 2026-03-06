@@ -1,53 +1,58 @@
-const images = document.querySelectorAll('.gallery img');
-const viewer = document.getElementById('viewer');
-const viewerImage = document.getElementById('viewerImage');
-
+let images = [];
 let currentIndex = 0;
-let startX = 0;
-let endX = 0;
 
-function openViewer(index) {
-  currentIndex = index;
-  viewerImage.src = images[index].src;
-  viewer.style.display = 'flex';
+window.onload = function(){
+
+images = document.querySelectorAll(".gallery img");
+
 }
 
-function closeViewer() {
-  viewer.style.display = 'none';
+function openImage(img){
+
+let preview = document.getElementById("preview");
+let previewImg = document.getElementById("previewImg");
+
+preview.style.display = "flex";
+previewImg.src = img.src;
+
+currentIndex = Array.from(images).indexOf(img);
+
 }
 
-function nextImage() {
-  currentIndex = (currentIndex + 1) % images.length;
-  viewerImage.src = images[currentIndex].src;
+function closeImage(){
+
+document.getElementById("preview").style.display = "none";
+
 }
 
-function prevImage() {
-  currentIndex = (currentIndex - 1 + images.length) % images.length;
-  viewerImage.src = images[currentIndex].src;
+function nextImage(){
+
+currentIndex++;
+
+if(currentIndex >= images.length){
+currentIndex = 0;
 }
 
-/* Keyboard support (desktop) */
-document.addEventListener('keydown', m => {
-  if (viewer.style.display === 'flex') {
-    if (m.key === 'ArrowRight') nextImage();
-    if (m.key === 'ArrowLeft') prevImage();
-    if (m.key === 'Escape') closeViewer();
-  }
-});
+document.getElementById("previewImg").src = images[currentIndex].src;
 
-/* Touch swipe support (mobile) */
-viewer.addEventListener('touchstart', e => {
-  startX = e.touches[0].clientX;
-});
+}
 
-viewer.addEventListener('touchend', e => {
-  endX = e.changedTouches[0].clientX;
-  handleSwipe();
-});
+function prevImage(){
 
-function handleSwipe() {
-  const diff = startX - endX;
-  if (Math.abs(diff) > 50) {
-    diff > 0 ? nextImage() : prevImage();
-  }
+currentIndex--;
+
+if(currentIndex < 0){
+currentIndex = images.length - 1;
+}
+
+document.getElementById("previewImg").src = images[currentIndex].src;
+
+}
+
+function goTo(page){
+window.location.href = page;
+}
+
+function goBack(){
+window.history.back();
 }
