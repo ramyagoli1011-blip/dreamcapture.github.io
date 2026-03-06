@@ -12,7 +12,7 @@ body {
 
 /* Navbar */
 nav {
-    background: whitesmoke;
+    background: #b0a7a7;
     padding: 1rem;
 }
 
@@ -157,6 +157,7 @@ footer {
 h2, h3, p {
     margin: 0.5rem 0;
 }
+
 
 
 
