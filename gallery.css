@@ -101,8 +101,8 @@ overflow: hidden;
 }
 
 .category img{
-  width: 80%;
-  height: 250px;
+  width: 50%;
+  height: 50px;
   object-fit: cover;
   display: block;
   transition: 0.3s ease;
