@@ -4,40 +4,48 @@
     <title>gallery</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="gallery.css">
+    <link rel="stylesheet" href="navbar.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 
 </head>
 <body>
 
-<nav>
-    <ul>
+<nav class="navbar">
+
+    <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="gallery.html">Gallery</a></li>
     </ul>
-</nav>
-    <section class="page-header text-center text-white">
-    <div class="container">
-        
-        <h2 class="fw-bold ">Our Gallery</h2>
-        <p style="font-family: cursive; font-size: 17px; font-weight: bold; ">
-            your memories
-        </p>
+
+    <div class="logo">
+        <img src="images/logo.jpeg" alt="Logo">
     </div>
-</section>
+
+</nav>
+
+    <section class="page-header text-center text-white">
+      <div class="container">
+        
+         <h2 class="fw-bold ">Our Gallery</h2>
+          <p style="font-family: cursive; font-size: 17px; font-weight: bold; ">
+            your memories
+          </p>
+      </div>
+    </section>
 
 <div class="categories">
 
-<div class="category" onclick="goTo('wedding.html')">
-<img src="images/wedlogo.png">
-<span>Wedding</span>
-</div>
+  <div class="category" onclick="goTo('wedding.html')">
+    <img src="images/wedlogo.png">
+    <span>Marriage</span>
+  </div>
 
-<div class="category" onclick="goTo('portrait.html')">
-<img src="images/babylogo.jpg">
-<span>portrait</span>
-</div>
+  <div class="category" onclick="goTo('portrait.html')">
+    <img src="images/babylogo.jpg">
+    <span>Portrait</span>
+  </div>
 
 </div>
 
@@ -45,34 +53,3 @@
     
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
