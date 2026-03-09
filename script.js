@@ -50,9 +50,10 @@ document.getElementById("previewImg").src = images[currentIndex].src;
 }
 
 function goTo(page){
-window.location.href = page;
+  window.location.href = page;
 }
 
 function goBack(){
-window.history.back();
+  window.history.back();
 }
+
