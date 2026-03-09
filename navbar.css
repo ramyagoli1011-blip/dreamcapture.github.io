@@ -5,6 +5,7 @@ body{
 
 /* Navbar layout */
 .navbar{
+    margin-top:40px;
     display:flex;
     justify-content:space-between;
     align-items:center;
@@ -38,8 +39,8 @@ body{
 
 /* Logo right side */
 .logo img{
-    height:48px;
-    width:auto;
+    height:100px;
+    width:100px;
 }
 
 /* Mobile responsive */
