@@ -1,0 +1,66 @@
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+}
+
+/* Navbar layout */
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:10px 20px;
+    background:whitesmoke;
+}
+
+/* Left menu */
+.nav-links{
+    list-style:none;
+    display:flex;
+    gap:25px;
+    margin:0;
+    padding:0;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:black;
+    font-size:16px;
+    padding-bottom:4px;
+}
+
+.nav-links a:hover{
+    color:powderblue;
+}
+
+.nav-links a.active{
+    border-bottom:2px solid #f39c12;
+}
+
+/* Logo right side */
+.logo img{
+    height:48px;
+    width:auto;
+}
+
+/* Mobile responsive */
+@media (max-width:600px){
+
+    .navbar{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .nav-links{
+        flex-wrap:wrap;
+        gap:15px;
+        margin-bottom:10px;
+    }
+
+    .logo{
+        align-self:flex-end;
+    }
+
+    .logo img{
+        height:40px;
+    }
+}
